@@ -3,30 +3,4 @@
 
 App Structure:
 
-├── app
-│   ├── __init__.py
-│   ├── main.py
-│   └── apis
-│   │   ├── __init__.py
-│   │   ├── base.py
-│   │   ├── task_api.py
-│   │   └── user_api.py
-│   └── utils
-│   │   ├── __init__.py
-│   │   ├── jwt_manager.py
-│   │   ├── response.py
-│   │   ├── task_utils.py
-│   │   └── user_utils.py
-│   └── utils
-│   │   ├── __init__.py
-│   │   ├── jwt_manager.py
-│   │   ├── response.py
-│   │   └── task_utils.py
-│   └── utils
-│       ├── __init__.py
-│       ├── base.py
-│       ├── database.py
-│       └── models
-│           ├── jwtblocklist_model.py
-│           ├── task_model.py
-│           └── user_model.py
+https://user-images.githubusercontent.com/78355845/182904874-0dae9f18-8a8d-4884-bbef-251a75a15dec.png
