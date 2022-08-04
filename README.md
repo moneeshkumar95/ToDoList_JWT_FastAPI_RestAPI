@@ -3,4 +3,4 @@
 
 App Structure:
 
-https://user-images.githubusercontent.com/78355845/182904874-0dae9f18-8a8d-4884-bbef-251a75a15dec.png
+![Screenshot_16](https://user-images.githubusercontent.com/78355845/182905089-99a2988a-6748-49da-9cd8-b53964e355df.png)
