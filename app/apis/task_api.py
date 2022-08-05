@@ -1,8 +1,9 @@
+from typing import List
 from fastapi import APIRouter, Depends, status
 from sqlalchemy.orm import Session
 from db.base import User, get_db, Task
 from schemas.user_schemas import UserSchema, UserAuthSchema
-from schemas.task_schemas import TaskFormSchema, TaskSchema
+from schemas.task_schemas import TaskFormSchema, TaskSchema, TaskSearchSchema, TaskListSchema
 from schemas.response_schema import SuccessSchema
 from utils.jwt_manager import get_current_user
 from utils.response import success_response
@@ -27,6 +28,15 @@ async def home(user: UserSchema = Depends(get_current_user)):
                             data=UserSchema.from_orm(user))
 
 
+@router.get("/search", response_model=SuccessSchema)
+async def task_search(title: str, user: UserAuthSchema = Depends(get_current_user), 
+                      db: Session = Depends(get_db)):
+    user.tasks = list(filter(lambda x: title in x.title, user.tasks))
+    
+    return success_response(detail='Task revertived succesfully',
+                            data=TaskListSchema.from_orm(user))
+    
+    
 @router.post('/', response_model=SuccessSchema)
 async def create_task(request: TaskFormSchema, user: UserAuthSchema = Depends(get_current_user),
                       db: Session = Depends(get_db)):

@@ -1,6 +1,6 @@
 from pydantic import BaseModel
 from typing import List
-from .task_schemas import TaskBaseSchema
+from .task_schemas import TaskBaseSchema, TaskListSchema
 
 # Schema for the User Authentication
 class UserAuthSchema(BaseModel):
@@ -11,10 +11,9 @@ class UserAuthSchema(BaseModel):
         orm_mode = True
 
 # Schema for the User
-class UserSchema(UserAuthSchema):
+class UserSchema(UserAuthSchema, TaskListSchema):
     user_id: str
     username: str
-    tasks: List[TaskBaseSchema] = []
     total_tasks: int
     finished_tasks: int
     unfinished_tasks: int
