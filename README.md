@@ -1,5 +1,5 @@
 # FastAPI - ToDoList with JWT Authentication
 
-![Screenshot_16](https://user-images.githubusercontent.com/78355845/182907770-bf2f4264-c80c-4fba-a753-b6494a741ce3.png)
+![Screenshot_16](https://user-images.githubusercontent.com/78355845/182996638-ea39e9a7-1974-4489-9f04-c1b825145fb2.png)
 
-![Screenshot_17](https://user-images.githubusercontent.com/78355845/182907806-afb7739e-2511-4c55-8b7b-656c8fae94f3.png)
+![Screenshot_17](https://user-images.githubusercontent.com/78355845/182996649-8b5f87ef-6df5-41a4-8109-71132be03415.png)
